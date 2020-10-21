@@ -22,11 +22,13 @@ majors <- wal %>%
   distinct(major)
 ```
 
+Distribution of all major breakdowns:
+
 ```{r major-type-graph}
 ggplot(data = wal, mapping = aes(x = major_type)) + 
   geom_bar()
 ```
-
+Distribution of major breakdowns for females:
 
 ```{r majors-female}
 wal_female <- wal %>%
@@ -36,6 +38,8 @@ ggplot(data = wal_female, mapping = aes(x = major_type)) +
   geom_bar(fill = "purple")
 
 ```
+Distribution of major breakdowns for males:
+
 ```{r majors-male}
 wal_male <- wal %>%
   filter(gender == "Male")
@@ -43,10 +47,169 @@ wal_male <- wal %>%
 ggplot(data = wal_male, mapping = aes(x = major_type)) + 
   geom_bar(fill = "blue")
 ```
-```{r average-question-f}
+Asking question:
+
+
+```{r average-askquestion-f}
   mean(wal_female$ask_question, na.rm = FALSE)
 ```
 
-```{r average-question-m}
+```{r average-askquestion-m}
   mean(wal_male$ask_question, na.rm = FALSE)
+```
+
+
+```{r test-ask-question}
+wal_male_female <- wal %>%
+  filter(gender == "Female" | gender == "Male")
+  
+  
+t_ask <- wal_male_female %>%
+  t_test(ask_question ~ gender, 
+         order = c("Female", "Male"), 
+         alternative = "less", 
+         conf_int = FALSE)
+t_ask
+```
+
+
+Answering question:
+
+```{r average-ansquestion-f}
+  mean(wal_female$answer_question, na.rm = FALSE)
+```
+
+```{r average-ansquestion-m}
+  mean(wal_male$answer_question, na.rm = FALSE)
+```
+
+```{r test-answer-question}
+  
+t_answer <- wal_male_female %>%
+  t_test(answer_question ~ gender, 
+         order = c("Female", "Male"), 
+         alternative = "less", 
+         conf_int = FALSE)
+t_answer
+```
+
+
+Reach out to male prof:
+
+```{r average-reachmale-f}
+  mean(wal_female$reach_male, na.rm = FALSE)
+```
+
+```{r average-reachmale-m}
+  mean(wal_male$reach_male, na.rm = FALSE)
+```
+
+```{r test-reach-male}
+  
+t_reach_male <- wal_male_female %>%
+  t_test(reach_male ~ gender, 
+         order = c("Female", "Male"), 
+         alternative = "less", 
+         conf_int = FALSE)
+t_reach_male
+```
+
+Reach out to female prof:
+
+```{r average-reachfemale-f}
+  mean(wal_female$reach_female, na.rm = FALSE)
+```
+
+```{r average-reachfemale-m}
+  mean(wal_male$reach_female, na.rm = FALSE)
+```
+
+```{r test-reach-female}
+  
+t_reach_female <- wal_male_female %>%
+  t_test(reach_female ~ gender, 
+         order = c("Male", "Female"), 
+         alternative = "less", 
+         conf_int = FALSE)
+t_reach_female
+```
+
+Comfort with disagreeing with group:
+
+```{r average-disagree-f}
+  mean(wal_female$disagree, na.rm = FALSE)
+```
+
+```{r average-disagree-m}
+  mean(wal_male$disagree, na.rm = FALSE)
+```
+
+```{r test-disagree}
+  
+t_disagree <- wal_male_female %>%
+  t_test(lead_group ~ gender, 
+         order = c("Male", "Female"), 
+         alternative = "less", 
+         conf_int = FALSE)
+t_disagree
+```
+
+Comfort with keeping others accountable:
+
+```{r average-accountable-f}
+  mean(wal_female$accountable, na.rm = FALSE)
+```
+
+```{r average-accountable-m}
+  mean(wal_male$accountable, na.rm = FALSE)
+```
+
+```{r test-grouplead}
+t_accountable <- wal_male_female %>%
+  t_test(lead_group ~ gender, 
+         order = c("Female", "Male"), 
+         alternative = "less", 
+         conf_int = FALSE)
+t_accountable
+```
+
+Perceptions of major breakdowns:
+
+```{r perception-stem}
+wal_stem <- wal %>%
+  filter(major_type == "Stem")
+
+mean(wal_stem$breakdown, na.rm = FALSE)
+
+```
+
+```{r perception-humanities}
+wal_humanities <- wal %>%
+  filter(major_type == "Humanities")
+
+mean(wal_humanities$breakdown, na.rm = FALSE)
+
+```
+```{r perception-socsci}
+wal_social_science <- wal %>%
+  filter(major_type == "Social Science")
+
+mean(wal_social_science$breakdown, na.rm = FALSE)
+
+```
+
+```{r perception-engineering}
+wal_engineering <- wal %>%
+  filter(major_type == "Engineering")
+
+mean(wal_engineering$breakdown, na.rm = FALSE)
+
+```
+
+```{r perception-engineering-and-stem}
+wal_stem_engineering <- wal %>%
+  filter(major_type == "Engineering" | major_type == "Stem")
+
+mean(wal_stem_engineering$breakdown, na.rm = FALSE)
+
 ```
