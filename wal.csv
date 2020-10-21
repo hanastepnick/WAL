@@ -1,0 +1,197 @@
+﻿year,major,major_type,hispanic,race,ask_question,answer_question,reach_male,reach_female,lead_group,disagree,accountable,breakdown,gender
+Sophomore,Environmental Science,Stem,No,White,4,4,4,5,4,3,2,5,Female
+Sophomore,Psychology,Stem,No,White,5,4,4,5,5,3,1,7,Female
+Sophomore,Public Policy,Social Science,No,Asian,3,2,3,4,4,3,4,6,Female
+Junior,Biology,Stem,No,White,4,4,4,5,5,4,4,6,Female
+Senior,Biology,Stem,Yes,White,4,3,5,5,5,5,5,5,Male
+Sophomore,Economics,Social Science,No,Asian,3,1,5,5,4,5,5,4,Female
+Junior,ECE,Engineering,No,White,4,4,3,3,5,5,4,4,Male
+Senior,Evolutionary Anthropology,Stem,No,White,5,4,5,5,4,5,3,8,Female
+Sophomore,Psychology,Stem,No,White,3,4,5,5,5,3,2,7,Male
+Senior,Linguistics,Humanities,Yes,White,5,4,3,4,5,4,5,7,Female
+Sophomore,Political Science,Social Science,No,Asian,5,5,4,5,5,4,5,7,Female
+Sophomore,Visual Media Studies,Humanities,No,White,5,4,4,5,5,3,3,7,Male
+Sophomore,Political Science,Social Science,No,White,2,3,2,3,4,4,1,5,Female
+Junior,Neuroscience,Stem,No,White,5,4,5,5,4,4,4,4,Male
+Junior,Neuroscience,Stem,No,White,5,4,5,5,4,4,4,4,Male
+Senior,BME,Engineering,No,Asian,4,4,5,5,5,4,3,4,Male
+Senior,Philosophy,Humanities,No,"American Indian, Indigenous American, or Alaska Native, White",4,3,4,4,3,2,2,4,Female
+Sophomore,Biology,Stem,Yes,White,2,4,4,5,5,4,4,4,Female
+Senior,Philosophy,Humanities,No,"American Indian, Indigenous American, or Alaska Native, White",4,3,4,4,3,2,2,4,Female
+Junior,Biology,Stem,No,Black or African American,5,5,3,5,4,2,3,7,Female
+Senior,Evolutionary Anthropology,Stem,Yes,Black or African American,5,5,4,5,5,5,5,8,Female
+Junior,Psychology,Stem,No,"White, Asian, Native Hawaiian or Other Pacific Islander",3,2,2,4,5,5,3,8,Female
+Sophomore,Computer Science,Stem,No,Asian,2,2,4,5,3,2,2,3,Female
+Freshman,Biology,Stem,No,Asian,4,4,4,4,4,3,3,5,Female
+Senior,EOS,Stem,No,Prefer not to say,4,5,3,5,5,5,4,10,Female
+Senior,Computer Science,Stem,No,White,3,2,4,5,4,4,2,4,Male
+Junior,Economics,Social Science,No,Asian,2,2,2,5,4,3,5,4,Female
+Sophomore,Civil Engineering,Engineering,No,White,4,4,5,5,3,4,3,6,Female
+Sophomore,Civil Engineering,Engineering,No,White,4,4,5,5,3,4,3,6,Female
+Junior,Psychology,Stem,No,White,5,5,2,4,3,4,4,8,Female
+Junior,Public Policy,Social Science,No,Black or African American,4,4,5,5,3,5,4,6,Female
+Freshman,Statistics,Stem,No,White,5,5,5,5,5,4,5,4,Female
+Freshman,Computer Science,Stem,No,White,3,3,2,3,3,1,1,3,Female
+Freshman,Undecided,Other,Yes,White,2,4,3,5,4,2,1,6,Male
+Freshman,Economics,Social Science,,Prefer not to say,5,4,4,4,4,4,4,4,Prefer not to say
+Freshman,Biology,Stem,No,Asian,5,2,1,5,4,4,5,4,Female
+Freshman,BME,Stem,No,Asian,4,5,5,5,5,4,4,4,Female
+Freshman,Chemistry,Stem,No,Asian,5,5,5,5,3,2,3,4,Male
+Junior,Public Policy,Social Science,No,Black or African American,4,4,5,5,3,5,4,6,Female
+Freshman,Biology,Stem,No,White,4,3,4,4,3,3,4,6,Female
+Freshman,Computer Science,Stem,No,White,4,4,5,5,4,4,4,3,Male
+Junior,Public Policy,Social Science,No,White,3,3,2,4,5,3,1,6,Female
+Freshman,Computer Science,Stem,No,Asian,5,5,4,5,5,5,3,4,Male
+Freshman,Political Science,Social Science,No,White,3,3,4,3,5,5,5,4,Female
+Freshman,Public Policy,Social Science,Yes,White,5,5,5,5,5,3,2,6,Female
+Freshman,Computer Science,Stem,No,White,5,5,5,5,4,5,3,4,Male
+Freshman,Computer Science,Stem,No,Asian,3,4,5,5,3,3,3,2,Male
+Senior,Public Policy,Social Science,Yes,White,2,3,4,4,4,3,5,4,Male
+Freshman,Biophysics,Stem,No,White,4,4,4,4,4,4,3,3,Male
+Freshman,Economics,Social Science,No,Asian,4,3,4,4,2,4,2,3,Female
+Freshman,Computer Science,Stem,No,Black or African American,3,2,3,5,3,4,4,4,Female
+Freshman,Computer Science,Stem,No,White,4,3,4,4,5,3,4,3,Male
+Junior,ECE,Engineering,No,White,2,3,2,2,3,2,3,3,Female
+Freshman,Statistics,Stem,No,White,3,3,5,5,4,5,5,3,Female
+Freshman,Program II in Food Studies,Other,No,White,5,3,5,5,5,4,2,8,Female
+Freshman,EOS,Stem,No,"White, Asian",3,4,2,4,3,3,4,7,Female
+Freshman,Political Science,Social Science,No,White,3,5,5,5,4,5,5,4,Male
+Freshman,Neuroscience,Stem,Yes,White,5,5,5,5,5,5,5,6,Female
+Freshman,Physics,Stem,No,Black or African American,3,2,3,5,3,4,4,4,Female
+Freshman,ECE,Engineering,No,Asian,3,4,3,4,4,5,5,3,Prefer not to say
+Junior,Computer Science,Stem,No,Asian,2,2,2,3,5,5,5,4,Female
+Senior,Statistics,Stem,No,Asian,3,3,5,5,3,2,3,4,Male
+Freshman,Chemistry,Stem,No,White,4,4,4,4,4,4,4,4,Female
+Freshman,Public Policy,Social Science,Yes,White,4,4,5,5,4,4,4,3,Male
+Freshman,Economics,Social Science,Yes,White,5,5,5,5,5,3,4,3,Male
+Senior,Computer Science,Stem,No,"White, Black or African American",2,2,3,3,1,1,1,3,Female
+Freshman,Political Science,Social Science,No,Asian,3,3,4,4,5,3,3,4,Male
+Senior,Public Policy,Social Science,No,White,5,5,5,5,2,1,1,6,Male
+Freshman,Neuroscience,Stem,Yes,White,5,5,5,5,5,5,5,6,Female
+Freshman,ECE,Engineering,No,Asian,5,5,5,5,3,2,1,4,Male
+Senior,Biology,Stem,Yes,"American Indian, Indigenous American, or Alaska Native, White",2,1,1,2,2,3,2,6,Female
+Senior,International Comparative Studies,Social Science,No,Black or African American,3,4,4,4,4,3,3,8,Female
+Freshman,Computer Science,Stem,No,"White, Asian",3,4,4,4,4,4,4,4,Male
+Freshman,Computer Science,Stem,Yes,White,3,1,5,5,4,2,4,4,Male
+Junior,Biology,Stem,No,Asian,2,2,4,4,4,3,4,6,Male
+Freshman,Environmental Engineering,Stem,No,Black or African American,4,3,2,3,3,3,3,3,Female
+Freshman,Evolutionary Anthropology,Stem,No,White,4,3,5,4,4,4,4,4,Transgender Male
+Freshman,Computer Science,Stem,Yes,"White, Black or African American",2,3,2,4,4,2,4,4,Female
+Freshman,Public Policy,Social Science,No,Asian,4,3,4,5,3,3,4,3,Female
+Freshman,Statistics,Stem,Yes,White,4,4,5,5,2,3,3,4,Male
+Freshman,Economics,Social Science,No,Asian,4,4,4,4,4,4,4,4,Male
+Senior,Computer Science,Stem,No,Asian,3,4,4,4,4,4,4,4,Male
+Junior,Computer Science,Stem,Yes,White,2,1,3,3,1,1,1,7,Male
+Freshman,Economics,Social Science,No,Asian,3,4,5,4,5,5,5,4,Female
+Senior,BME,Stem,No,White,5,5,4,5,5,5,5,4,Female
+Freshman,Economics,Social Science,No,Asian,5,5,5,5,3,2,1,4,Male
+Senior,Biology,Stem,No,White,5,4,5,5,5,5,4,6,Female
+Freshman,Neuroscience,Stem,No,White,3,3,3,4,4,4,2,4,Female
+Senior,Public Policy,Social Science,No,Black or African American,3,2,2,3,4,4,4,4,Female
+Senior,Public Policy,Social Science,No,White,3,3,3,4,3,2,1,5,Female
+Senior,BME,Engineering,No,White,3,5,5,5,4,4,3,4,Gender Non-Conforming/Nonbinary
+Junior,BME,Engineering,No,White,5,5,2,2,5,5,3,4,Male
+Senior,Statistics,Stem,No,White,4,4,4,5,4,3,4,4,Female
+Freshman,Statistics,Stem,No,White,4,3,3,3,3,2,1,4,Transgender Male
+Sophomore,Civil Engineering,Engineering,No,White,4,4,5,5,3,4,3,6,Female
+Freshman,Physics,Stem,No,Black or African American,3,2,3,5,3,4,4,4,Female
+Senior,Public Policy,Social Science,No,Black or African American,5,3,4,3,5,4,4,6,Female
+Senior,Public Policy,Social Science,No,White,4,3,4,5,4,4,3,7,Female
+Senior,Psychology,Stem,No,White,3,3,4,4,4,2,4,7,Female
+Senior,Public Policy,Stem,No,Asian,4,4,3,5,4,4,4,5,Female
+Junior,History,Humanities,Yes,White,5,5,3,4,4,4,3,4,Female
+Senior,Religion,Humanities,No,Black or African American,5,5,5,5,5,4,3,6,Female
+Junior,Computer Science,Stem,No,White,4,3,5,5,5,5,5,4,Male
+Freshman,Mathematics,Stem,No,White,3,3,2,5,5,4,1,3,Female
+Junior,Economics,Social Science,No,Asian,1,1,1,1,3,2,1,3,Female
+Senior,Linguistics,Humanities,No,White,5,5,5,5,5,5,5,7,Female
+Senior,Computer Science,Stem,No,White,4,4,4,4,5,5,5,3,Female
+Junior,African & African American Studies,Social Science,No,"White, Black or African American",3,3,4,5,3,4,2,5,Male
+Senior,Public Policy,Social Science,No,Black or African American,2,2,3,4,4,4,3,6,Female
+Junior,Global Health,Stem,No,Asian,4,3,5,4,3,4,5,8,Male
+Sophomore,Global Health,Stem,No,Asian,4,4,3,4,4,3,4,8,Female
+Junior,Biology,Stem,No,White,4,4,4,4,3,3,4,5,Female
+Senior,Program II,Other,No,Asian,4,2,4,5,5,3,3,8,Female
+Senior,Global Health,Stem,Yes,White,5,5,4,4,3,3,4,8,Female
+Senior,Public Policy,Social Science,No,Asian,4,4,3,4,4,3,3,7,Female
+Senior,Cultural Anthropology,Social Science,No,White,5,4,5,5,4,4,4,8,Female
+Freshman,Mechanical Engineering,Engineering,Yes,White,4,3,4,5,4,4,4,3,Female
+Junior,Biology,Stem,No,Prefer not to say,3,3,3,4,4,3,3,6,Female
+Senior,Psychology,Stem,No,"White, Black or African American",1,1,1,1,1,5,3,7,Male
+Freshman,ECE,Engineering,No,White,4,4,5,5,4,4,4,4,Gender Non-Conforming/Nonbinary
+Freshman,Economics,Social Science,No,White,4,3,5,5,3,3,3,4,Male
+Senior,Biology,Stem,No,White,3,3,3,4,4,4,3,5,Female
+Freshman,Global Health,Stem,No,Asian,4,3,5,5,4,4,5,4,Female
+Sophomore,History,Humanities,No,White,5,4,4,4,3,4,3,6,Male
+Freshman,Computer Science,Stem,No,Asian,1,2,3,3,2,2,2,6,Male
+Freshman,Spanish,Humanities,No,White,3,2,2,3,3,3,2,5,Female
+Sophomore,Statistics,Stem,No,"White, Asian",4,3,4,4,3,5,4,4,Female
+Sophomore,Public Policy,Social Science,No,White,5,4,5,5,4,4,3,6,Male
+Sophomore,Mathematics,Stem,No,White,2,3,4,4,2,3,3,2,Male
+Sophomore,Neuroscience,Stem,No,Asian,5,4,4,5,5,5,4,4,Female
+Senior,Environmental Science,Stem,No,"White, Asian",4,4,3,5,5,4,5,7,Female
+Junior,Public Policy,Social Science,No,Asian,3,3,3,5,4,5,4,7,Female
+Freshman,Biology,Stem,No,White,2,2,2,4,4,4,4,7,Female
+Sophomore,Cultural Anthropology,Social Science,Yes,"American Indian, Indigenous American, or Alaska Native, White",5,5,5,5,4,4,4,6,Male
+Sophomore,Environmental Science,Stem,No,White,4,4,4,5,4,3,2,5,Female
+Freshman,Political Science,Social Science,No,White,3,3,3,4,3,2,2,5,Female
+Sophomore,ECE,Engineering,No,Prefer not to say,3,2,4,4,5,4,4,3,Male
+Freshman,Biology,Stem,No,Asian,5,2,1,5,4,4,5,4,Female
+Sophomore,Linguistics,Humanities,No,White,4,4,4,5,4,3,3,5,Female
+Senior,Political Science,Social Science,No,"White, Asian",4,5,5,5,4,4,4,6,Male
+Sophomore,Political Science,Social Science,No,White,4,4,2,4,5,5,2,3,Female
+Freshman,Biophysics,Stem,No,"White, Asian",4,4,4,5,4,4,4,3,Female
+Sophomore,Neuroscience,Stem,No,White,2,2,2,4,2,2,2,5,Female
+Sophomore,Mechanical Engineering,Engineering,No,Asian,3,3,3,5,3,3,3,3,Female
+Sophomore,Computer Science,Stem,No,Asian,4,4,5,5,5,5,4,3,Female
+Freshman,Economics,Social Science,No,White,2,2,4,5,4,4,5,4,Female
+Freshman,Economics,Social Science,No,White,2,2,4,5,4,4,5,4,Female
+Freshman,Computer Science,Stem,No,White,4,3,3,3,4,4,2,4,Female
+Freshman,Computer Science,Stem,No,Asian,4,2,4,4,4,3,5,4,Female
+Sophomore,Philosophy,Humanities,No,White,4,3,3,4,2,2,2,4,Female
+Junior,Biology,Stem,No,Asian,4,3,4,5,4,4,4,7,Female
+Senior,Public Policy,Social Science,No,White,5,3,3,3,5,5,3,6,Female
+Freshman,Political Science,Social Science,No,White,3,3,3,4,3,2,2,5,Female
+Junior,Public Policy,Social Science,No,Asian,3,3,3,5,4,5,4,7,Female
+Freshman,Physics,Stem,No,Asian,1,1,5,1,2,1,4,2,Male
+Sophomore,Biology,Stem,No,Black or African American,4,3,5,4,4,3,4,7,Male
+Freshman,Environmental Science,Stem,No,White,2,3,2,4,3,2,3,7,Female
+Sophomore,Biology,Stem,No,Prefer not to say,4,4,3,5,5,5,4,6,Female
+Freshman,Biology,Stem,No,White,2,2,2,4,4,4,4,7,Female
+Senior,Sociology,Social Science,No,White,4,4,4,4,3,2,2,7,Female
+Sophomore,Public Policy,Social Science,No,White,3,3,4,4,4,4,3,5,Female
+Freshman,Mathematics,Stem,No,White,4,4,4,4,4,5,3,3,Male
+Sophomore,BME,Engineering,No,Asian,2,2,4,5,1,2,3,4,Female
+Junior,Sociology,Social Science,No,White,5,5,5,5,5,5,4,6,Male
+Senior,Evolutionary Anthropology,Stem,Yes,White,5,3,5,5,3,4,5,7,Male
+Sophomore,Political Science,Social Science,No,White,5,5,5,5,5,5,5,4,Male
+Freshman,Political Science,Social Science,No,White,2,1,2,4,3,2,3,5,Female
+Freshman,Biology,Stem,No,Asian,5,2,1,5,4,4,5,4,Female
+Senior,Visual Arts,Humanities,No,White,5,5,4,5,5,5,4,2,Male
+Junior,Computer Science,Stem,No,White,2,2,2,5,3,2,1,5,Female
+Junior,Psychology,Stem,No,White,3,2,4,5,4,2,3,7,Female
+Sophomore,Biology,Stem,No,"White, Black or African American",5,5,5,5,5,5,3,4,Female
+Sophomore,Global Health,Stem,No,White,4,4,4,4,4,4,4,7,Female
+Junior,Program II,Other,No,White,4,4,3,3,4,4,3,6,Female
+Freshman,Economics,Social Science,No,Asian,3,3,2,2,4,3,2,4,Female
+Freshman,Mathematics,Social Science,No,White,3,4,5,5,4,3,3,4,Male
+Junior,Psychology,Stem,No,White,5,5,2,4,3,4,4,8,Female
+Sophomore,BME,Engineering,No,Asian,1,1,1,1,1,1,1,5,Male
+Junior,Chemistry,Stem,No,White,3,2,2,5,2,2,2,5,Female
+Senior,Psychology,Stem,No,Black or African American,4,3,3,4,4,5,5,6,Female
+Freshman,Data Science,Stem,No,"White, Asian",4,3,5,5,4,5,5,4,Male
+Freshman,Biology,Stem,No,White,4,4,4,4,3,3,2,6,Male
+Junior,Political Science,Social Science,No,White,5,5,5,5,5,4,4,3,Male
+Sophomore,Biology,Stem,No,Asian,2,2,2,4,3,4,2,7,Female
+Sophomore,Mechanical Engineering,Engineering,No,White,4,4,4,4,5,5,5,4,Male
+Sophomore,Environmental Science,Stem,No,"White, Asian",5,5,5,5,5,3,3,6,Female
+Sophomore,BME,Engineering,Yes,Black or African American,5,5,5,5,4,4,3,4,Female
+Sophomore,Mathematics,Stem,No,White,3,4,4,5,3,3,2,4,Female
+Sophomore,Computer Science,Stem,No,White,4,4,5,5,3,4,4,4,Male
+Sophomore,Economics,Social Science,No,White,3,3,4,4,3,4,4,4,Male
+Sophomore,Economics,Social Science,No,White,3,2,4,4,4,4,3,3,Male
+Sophomore,Biology,Stem,No,White,3,4,4,4,4,2,3,6,Male
+Sophomore,Computer Science,Stem,No,Asian,4,3,5,5,5,5,2,3,Female
+Sophomore,Economics,Social Science,No,White,3,2,4,4,4,4,3,3,Male
+Sophomore,Environmental Science,Stem,No,"White, Asian",5,5,5,5,5,3,3,6,Female
+Sophomore,BME,Engineering,Yes,Black or African American,5,5,5,5,4,4,3,4,Female

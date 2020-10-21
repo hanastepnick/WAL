@@ -1,0 +1,52 @@
+---
+title: "WAL Data Analysis"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r config-git}
+usethis::use_git_config(user.name = "hanastepnick", user.email = "hana.stepnick@duke.edu")
+```
+
+```{r load}
+library(tidyverse)
+library(infer)
+wal <- read_csv("wal.csv")
+```
+
+```{r majors}
+majors <- wal %>%
+  distinct(major)
+```
+
+```{r major-type-graph}
+ggplot(data = wal, mapping = aes(x = major_type)) + 
+  geom_bar()
+```
+
+
+```{r majors-female}
+wal_female <- wal %>%
+  filter(gender == "Female")
+
+ggplot(data = wal_female, mapping = aes(x = major_type)) + 
+  geom_bar(fill = "purple")
+
+```
+```{r majors-male}
+wal_male <- wal %>%
+  filter(gender == "Male")
+
+ggplot(data = wal_male, mapping = aes(x = major_type)) + 
+  geom_bar(fill = "blue")
+```
+```{r average-question-f}
+  mean(wal_female$ask_question, na.rm = FALSE)
+```
+
+```{r average-question-m}
+  mean(wal_male$ask_question, na.rm = FALSE)
+```
