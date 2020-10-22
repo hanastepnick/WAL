@@ -213,3 +213,22 @@ wal_stem_engineering <- wal %>%
 mean(wal_stem_engineering$breakdown, na.rm = FALSE)
 
 ```
+
+
+Engineering vs SS Gender Breakdown:
+```{r engineering-ss}
+wal_engineering_ss <- wal %>%
+  filter(major_type == "Engineering" | major_type == "Social Science")
+
+t_engineering_ss_breakdown <- wal_engineering_ss %>%
+  t_test(breakdown ~ major_type, 
+         order = c("Engineering", "Social Science"), 
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_engineering_ss_breakdown
+```
+
+
+
+
