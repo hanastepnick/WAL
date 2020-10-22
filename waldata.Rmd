@@ -229,6 +229,21 @@ t_engineering_ss_breakdown <- wal_engineering_ss %>%
 t_engineering_ss_breakdown
 ```
 
+Trinity vs. Pratt analyses:
+
+```{r engineering-ask}
+wal_pratt <- wal %>%
+  filter(school == "Pratt") %>%
+  filter(gender == "Male" | gender == "Female")
+
+t_ask_pratt <- wal_pratt %>%
+  t_test(ask_question ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_ask_pratt
+```
 
 
 
