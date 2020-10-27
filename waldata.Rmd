@@ -24,10 +24,13 @@ majors <- wal %>%
 
 Distribution of all major breakdowns:
 
-```{r major-type-graph}
-ggplot(data = wal, mapping = aes(x = major_type)) + 
-  geom_bar()
+```{r major-type-graph, fig.width = 10}
+ggplot(data = wal, mapping = aes(x = major_type, fill = gender)) + 
+  geom_bar() +
+  labs(title = "Major Categories by Gender Breakdown", x = "Major Type", y = "Count", fill = "Gender")
+  
 ```
+
 Distribution of major breakdowns for females:
 
 ```{r majors-female}
@@ -561,4 +564,473 @@ t_accountable_pratt <- wal_pratt%>%
          conf_int = FALSE)
 
 t_accountable_pratt
+```
+
+Stem:
+
+```{r stem-female}
+stem_female <- wal %>%
+  filter(major_type == "Stem") %>%
+  filter(gender == "Female")
+```
+
+```{r stem-male}
+stem_male <- wal %>%
+  filter(major_type == "Stem") %>%
+  filter(gender == "Male")
+```
+
+```{r female-ask-stem}
+mean(stem_female$ask_question, na.rm = FALSE)
+```
+
+```{r male-ask-stem}
+mean(stem_male$ask_question, na.rm = FALSE)
+```
+
+```{r stem-ask}
+wal_stem <- wal %>%
+  filter(major_type == "Stem") %>%
+  filter(gender == "Male" | gender == "Female")
+
+t_ask_stem <- wal_stem %>%
+  t_test(ask_question ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_ask_stem
+```
+
+
+```{r female-answer-stem}
+mean(stem_female$answer_question, na.rm = FALSE)
+```
+
+```{r male-answer-stem}
+mean(stem_male$answer_question, na.rm = FALSE)
+```
+
+
+```{r stem-answer}
+
+t_answer_stem <- wal_stem %>%
+  t_test(answer_question ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_answer_stem
+```
+
+```{r female-reachmale-stem}
+mean(stem_female$reach_male, na.rm = FALSE)
+```
+
+```{r male-reachmale-stem}
+mean(stem_male$reach_male, na.rm = FALSE)
+```
+
+
+```{r stem-reachmale}
+
+t_reachmale_stem <- wal_stem %>%
+  t_test(reach_male ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachmale_stem
+```
+
+```{r female-reachfemale-stem}
+mean(stem_female$reach_female, na.rm = FALSE)
+```
+
+```{r male-reachfemale-stem}
+mean(stem_male$reach_female, na.rm = FALSE)
+```
+
+
+```{r stem-reachfemale}
+
+t_reachfemale_stem<- wal_stem %>%
+  t_test(reach_female ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachfemale_stem
+```
+
+```{r female-leadgroup-stem}
+mean(stem_female$lead_group, na.rm = FALSE)
+```
+
+```{r male-leadgroup-stem}
+mean(stem_male$lead_group, na.rm = FALSE)
+```
+
+
+```{r stem-leadgroup}
+
+t_leadgroup_stem <- wal_stem %>%
+  t_test(lead_group ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_leadgroup_stem
+```
+
+```{r female-disagree-stem}
+mean(stem_female$disagree, na.rm = FALSE)
+```
+
+```{r male-disagree-stem}
+mean(stem_male$disagree, na.rm = FALSE)
+```
+
+
+```{r stem-disagree}
+
+t_disagree_stem <- wal_stem %>%
+  t_test(disagree ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_disagree_stem
+```
+
+```{r female-accountable-stem}
+mean(stem_female$accountable, na.rm = FALSE)
+```
+
+```{r male-accountable-stem}
+mean(stem_male$accountable, na.rm = FALSE)
+```
+
+
+```{r stem-accountable}
+
+t_accountable_stem <- wal_stem %>%
+  t_test(accountable ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_accountable_stem
+```
+
+Social Science:
+
+```{r ss-female}
+ss_female <- wal %>%
+  filter(major_type == "Social Science") %>%
+  filter(gender == "Female")
+```
+
+```{r ss-male}
+ss_male <- wal %>%
+  filter(major_type == "Social Science") %>%
+  filter(gender == "Male")
+```
+
+```{r female-ask-ss}
+mean(ss_female$ask_question, na.rm = FALSE)
+```
+
+```{r male-ask-ss}
+mean(ss_male$ask_question, na.rm = FALSE)
+```
+
+```{r ss-ask}
+wal_ss<- wal %>%
+  filter(major_type == "Social Science") %>%
+  filter(gender == "Male" | gender == "Female")
+
+t_ask_ss <- wal_ss %>%
+  t_test(ask_question ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_ask_ss
+```
+
+
+```{r female-answer-ss}
+mean(ss_female$answer_question, na.rm = FALSE)
+```
+
+```{r male-answer-ss}
+mean(ss_male$answer_question, na.rm = FALSE)
+```
+
+
+```{r ss-answer}
+t_answer_ss <- wal_ss %>%
+  t_test(answer_question ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_answer_ss
+```
+
+```{r female-reachmale-ss}
+mean(ss_female$reach_male, na.rm = FALSE)
+```
+
+```{r male-reachmale-ss}
+mean(ss_male$reach_male, na.rm = FALSE)
+```
+
+
+```{r ss-reachmale}
+
+t_reachmale_ss <- wal_ss %>%
+  t_test(reach_male ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachmale_ss
+```
+
+```{r female-reachfemale-ss}
+mean(ss_female$reach_female, na.rm = FALSE)
+```
+
+```{r male-reachfemale-ss}
+mean(ss_male$reach_female, na.rm = FALSE)
+```
+
+
+```{r ss-reachfemale}
+
+t_reachfemale_ss <- wal_ss %>%
+  t_test(reach_female ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachfemale_ss
+```
+
+```{r female-leadgroup-ss}
+mean(ss_female$lead_group, na.rm = FALSE)
+```
+
+```{r male-leadgroup-ss}
+mean(ss_male$lead_group, na.rm = FALSE)
+```
+
+
+```{r ss-leadgroup}
+
+t_leadgroup_ss <- wal_ss %>%
+  t_test(lead_group ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_leadgroup_ss
+```
+
+```{r female-disagree-ss}
+mean(ss_female$disagree, na.rm = FALSE)
+```
+
+```{r male-disagree-ss}
+mean(stem_male$disagree, na.rm = FALSE)
+```
+
+
+```{r ss-disagree}
+
+t_disagree_ss <- wal_ss %>%
+  t_test(disagree ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_disagree_ss
+```
+
+```{r female-accountable-ss}
+mean(ss_female$accountable, na.rm = FALSE)
+```
+
+```{r male-accountable-ss}
+mean(ss_male$accountable, na.rm = FALSE)
+```
+
+
+```{r ss-accountable}
+
+t_accountable_ss <- wal_ss %>%
+  t_test(accountable ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_accountable_ss
+```
+
+Humanities:
+
+```{r hum-female}
+hum_female <- wal %>%
+  filter(major_type == "Humanities") %>%
+  filter(gender == "Female")
+```
+
+```{r hum-male}
+hum_male <- wal %>%
+  filter(major_type == "Humanities") %>%
+  filter(gender == "Male")
+```
+
+```{r female-ask-hum}
+mean(hum_female$ask_question, na.rm = FALSE)
+```
+
+```{r male-ask-hum}
+mean(hum_male$ask_question, na.rm = FALSE)
+```
+
+```{r hum-ask}
+wal_hum<- wal %>%
+  filter(major_type == "Humanities") %>%
+  filter(gender == "Male" | gender == "Female")
+
+t_ask_hum <- wal_hum %>%
+  t_test(ask_question ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_ask_hum
+```
+
+
+```{r female-answer-hum}
+mean(hum_female$answer_question, na.rm = FALSE)
+```
+
+```{r male-answer-hum}
+mean(hum_male$answer_question, na.rm = FALSE)
+```
+
+
+```{r hum-answer}
+t_answer_hum <- wal_hum %>%
+  t_test(answer_question ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_answer_hum
+```
+
+```{r female-reachmale-hum}
+mean(hum_female$reach_male, na.rm = FALSE)
+```
+
+```{r male-reachmale-hum}
+mean(hum_male$reach_male, na.rm = FALSE)
+```
+
+
+```{r hum-reachmale}
+
+t_reachmale_hum <- wal_hum %>%
+  t_test(reach_male ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachmale_hum
+```
+
+```{r female-reachfemale-hum}
+mean(hum_female$reach_female, na.rm = FALSE)
+```
+
+```{r male-reachfemale-hum}
+mean(hum_male$reach_female, na.rm = FALSE)
+```
+
+
+```{r hum-reachfemale}
+
+t_reachfemale_hum <- wal_hum %>%
+  t_test(reach_female ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachfemale_hum
+```
+
+```{r female-leadgroup-hum}
+mean(hum_female$lead_group, na.rm = FALSE)
+```
+
+```{r male-leadgroup-hum}
+mean(hum_male$lead_group, na.rm = FALSE)
+```
+
+
+```{r hum-leadgroup}
+
+t_leadgroup_hum <- wal_hum %>%
+  t_test(lead_group ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_leadgroup_hum
+```
+
+```{r female-disagree-hum}
+mean(hum_female$disagree, na.rm = FALSE)
+```
+
+```{r male-disagree-hum}
+mean(stem_male$disagree, na.rm = FALSE)
+```
+
+
+```{r hum-disagree}
+
+t_disagree_hum <- wal_hum %>%
+  t_test(disagree ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_disagree_hum
+```
+
+```{r female-accountable-hum}
+mean(hum_female$accountable, na.rm = FALSE)
+```
+
+```{r male-accountable-hum}
+mean(hum_male$accountable, na.rm = FALSE)
+```
+
+
+```{r hum-accountable}
+
+t_accountable_hum <- wal_hum %>%
+  t_test(accountable ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_accountable_hum
 ```
