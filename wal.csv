@@ -74,7 +74,7 @@ Senior,International Comparative Studies,Social Science,No,Black or African Amer
 Freshman,Computer Science,Stem,No,"White, Asian",3,4,4,4,4,4,4,4,Male,Trinity
 Freshman,Computer Science,Stem,Yes,White,3,1,5,5,4,2,4,4,Male,Trinity
 Junior,Biology,Stem,No,Asian,2,2,4,4,4,3,4,6,Male,Trinity
-Freshman,Environmental Engineering,Stem,No,Black or African American,4,3,2,3,3,3,3,3,Female,Pratt
+Freshman,Environmental Engineering,Engineering,No,Black or African American,4,3,2,3,3,3,3,3,Female,Pratt
 Freshman,Evolutionary Anthropology,Stem,No,White,4,3,5,4,4,4,4,4,Transgender Male,Trinity
 Freshman,Computer Science,Stem,Yes,"White, Black or African American",2,3,2,4,4,2,4,4,Female,Trinity
 Freshman,Public Policy,Social Science,No,Asian,4,3,4,5,3,3,4,3,Female,Trinity
@@ -195,3 +195,8 @@ Sophomore,Computer Science,Stem,No,Asian,4,3,5,5,5,5,2,3,Female,Trinity
 Sophomore,Economics,Social Science,No,White,3,2,4,4,4,4,3,3,Male,Trinity
 Sophomore,Environmental Science,Stem,No,"White, Asian",5,5,5,5,5,3,3,6,Female,Trinity
 Sophomore,BME,Engineering,Yes,Black or African American,5,5,5,5,4,4,3,4,Female,Pratt
+Sophomore,BME,Engineering,No,White,2,3,4,5,3,2,3,6,Female,Pratt
+Sophomore,Economics,Social Science,No,White,5,5,5,5,3,3,4,4,Male,Trinity
+Sophomore,BME,Engineering,No,White,2,3,4,5,3,2,3,6,Female,Pratt
+Sophomore,Chemistry,Stem,No,White,4,4,3,5,4,3,2,3,Female,Trinity
+Junior,Public Policy,Social Science,No,Asian,3,3,3,5,4,5,4,7,Female,Trinity

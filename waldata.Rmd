@@ -49,7 +49,6 @@ ggplot(data = wal_male, mapping = aes(x = major_type)) +
 ```
 Asking question:
 
-
 ```{r average-askquestion-f}
   mean(wal_female$ask_question, na.rm = FALSE)
 ```
@@ -133,6 +132,26 @@ t_reach_female <- wal_male_female %>%
          conf_int = FALSE)
 t_reach_female
 ```
+Comfort with leading a group:
+
+```{r average-lead-f}
+  mean(wal_female$lead_group, na.rm = FALSE)
+```
+
+```{r average-lead-m}
+  mean(wal_male$lead_group, na.rm = FALSE)
+```
+
+```{r test-lead}
+  
+t_lead <- wal_male_female %>%
+  t_test(lead_group ~ gender, 
+         order = c("Male", "Female"), 
+         alternative = "less", 
+         conf_int = FALSE)
+t_lead
+```
+
 
 Comfort with disagreeing with group:
 
@@ -147,7 +166,7 @@ Comfort with disagreeing with group:
 ```{r test-disagree}
   
 t_disagree <- wal_male_female %>%
-  t_test(lead_group ~ gender, 
+  t_test(disagree ~ gender, 
          order = c("Male", "Female"), 
          alternative = "less", 
          conf_int = FALSE)
@@ -166,7 +185,7 @@ Comfort with keeping others accountable:
 
 ```{r test-grouplead}
 t_accountable <- wal_male_female %>%
-  t_test(lead_group ~ gender, 
+  t_test(accountable ~ gender, 
          order = c("Female", "Male"), 
          alternative = "less", 
          conf_int = FALSE)
@@ -231,7 +250,186 @@ t_engineering_ss_breakdown
 
 Trinity vs. Pratt analyses:
 
-```{r engineering-ask}
+Trinity: 
+
+```{r trinity-female}
+trinity_female <- wal %>%
+  filter(school == "Trinity") %>%
+  filter(gender == "Female")
+```
+
+```{r trinity-male}
+trinity_male <- wal %>%
+  filter(school == "Trinity") %>%
+  filter(gender == "Male")
+```
+
+```{r female-ask-trinity}
+mean(trinity_female$ask_question, na.rm = FALSE)
+```
+
+```{r male-ask-trinity}
+mean(trinity_male$ask_question, na.rm = FALSE)
+```
+
+```{r trinity-ask}
+wal_trinity <- wal %>%
+  filter(school == "Trinity") %>%
+  filter(gender == "Male" | gender == "Female")
+
+t_ask_trinity <- wal_trinity %>%
+  t_test(ask_question ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_ask_trinity
+```
+
+
+```{r female-answer-trinity}
+mean(trinity_female$answer_question, na.rm = FALSE)
+```
+
+```{r male-answer-trinity}
+mean(trinity_male$answer_question, na.rm = FALSE)
+```
+
+
+```{r trinity-answer}
+
+t_answer_trinity <- wal_trinity %>%
+  t_test(answer_question ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_answer_trinity
+```
+
+```{r female-reachmale-trinity}
+mean(trinity_female$reach_male, na.rm = FALSE)
+```
+
+```{r male-reachmale-trinity}
+mean(trinity_male$reach_male, na.rm = FALSE)
+```
+
+
+```{r trinity-reachmale}
+
+t_reachmale_trinity <- wal_trinity %>%
+  t_test(reach_male ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachmale_trinity
+```
+
+```{r female-reachfemale-trinity}
+mean(trinity_female$reach_female, na.rm = FALSE)
+```
+
+```{r male-reachfemale-trinity}
+mean(trinity_male$reach_female, na.rm = FALSE)
+```
+
+
+```{r trinity-reachfemale}
+
+t_reachfemale_trinity <- wal_trinity %>%
+  t_test(reach_female ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachfemale_trinity
+```
+
+```{r female-leadgroup-trinity}
+mean(trinity_female$lead_group, na.rm = FALSE)
+```
+
+```{r male-leadgroup-trinity}
+mean(trinity_male$lead_group, na.rm = FALSE)
+```
+
+
+```{r trinity-leadgroup}
+
+t_leadgroup_trinity <- wal_trinity %>%
+  t_test(lead_group ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_leadgroup_trinity
+```
+```{r female-disagree-trinity}
+mean(trinity_female$disagree, na.rm = FALSE)
+```
+
+```{r male-disagree-trinity}
+mean(trinity_male$disagree, na.rm = FALSE)
+```
+
+
+```{r trinity-disagree}
+
+t_disagree_trinity <- wal_trinity %>%
+  t_test(disagree ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_disagree_trinity
+```
+
+```{r female-accountable-trinity}
+mean(trinity_female$accountable, na.rm = FALSE)
+```
+
+```{r male-accountable-trinity}
+mean(trinity_male$accountable, na.rm = FALSE)
+```
+
+
+```{r trinity-accountable}
+
+t_accountable_trinity <- wal_trinity %>%
+  t_test(accountable ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_accountable_trinity
+```
+
+
+Pratt:
+
+```{r pratt-female}
+pratt_female <- wal %>%
+  filter(school == "Pratt") %>%
+  filter(gender == "Female")
+```
+
+```{r pratt-male}
+pratt_male <- wal %>%
+  filter(school == "Pratt") %>%
+  filter(gender == "Male")
+```
+
+```{r female-ask-pratt}
+mean(pratt_female$ask_question, na.rm = FALSE)
+```
+
+```{r male-ask-pratt}
+mean(pratt_male$ask_question, na.rm = FALSE)
+```
+
+```{r pratt-ask}
 wal_pratt <- wal %>%
   filter(school == "Pratt") %>%
   filter(gender == "Male" | gender == "Female")
@@ -246,4 +444,121 @@ t_ask_pratt
 ```
 
 
+```{r female-answer-pratt}
+mean(pratt_female$answer_question, na.rm = FALSE)
+```
 
+```{r male-answer-pratt}
+mean(pratt_male$answer_question, na.rm = FALSE)
+```
+
+
+```{r pratt-answer}
+
+t_answer_pratt <- wal_pratt %>%
+  t_test(answer_question ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_answer_pratt
+```
+
+```{r female-reachmale-pratt}
+mean(pratt_female$reach_male, na.rm = FALSE)
+```
+
+```{r male-reachmale-pratt}
+mean(pratt_male$reach_male, na.rm = FALSE)
+```
+
+
+```{r pratt-reachmale}
+
+t_reachmale_pratt <- wal_pratt %>%
+  t_test(reach_male ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachmale_pratt
+```
+
+```{r female-reachfemale-pratt}
+mean(pratt_female$reach_female, na.rm = FALSE)
+```
+
+```{r male-reachfemale-pratt}
+mean(pratt_male$reach_female, na.rm = FALSE)
+```
+
+
+```{r pratt-reachfemale}
+
+t_reachfemale_pratt <- wal_pratt %>%
+  t_test(reach_female ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachfemale_pratt
+```
+
+```{r female-leadgroup-pratt}
+mean(pratt_female$lead_group, na.rm = FALSE)
+```
+
+```{r male-leadgroup-pratt}
+mean(pratt_male$lead_group, na.rm = FALSE)
+```
+
+
+```{r pratt-leadgroup}
+t_leadgroup_pratt <- wal_pratt %>%
+  t_test(lead_group ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_leadgroup_pratt
+```
+
+```{r female-disagree-pratt}
+mean(pratt_female$disagree, na.rm = FALSE)
+```
+
+```{r male-disagree-pratt}
+mean(pratt_male$disagree, na.rm = FALSE)
+```
+
+
+```{r pratt-disagree}
+
+t_disagree_pratt <- wal_pratt %>%
+  t_test(disagree ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_disagree_pratt
+```
+
+```{r female-accountable-pratt}
+mean(pratt_female$accountable, na.rm = FALSE)
+```
+
+```{r male-accountable-pratt}
+mean(pratt_male$accountable, na.rm = FALSE)
+```
+
+
+```{r pratt-accountable}
+
+t_accountable_pratt <- wal_pratt%>%
+  t_test(accountable ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_accountable_pratt
+```
