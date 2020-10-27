@@ -1034,3 +1034,322 @@ t_accountable_hum <- wal_hum %>%
 
 t_accountable_hum
 ```
+
+
+Breaking down social sciences: pub pol versus econ
+
+Public Policy:
+
+```{r pp-female}
+pp_female <- wal %>%
+  filter(major == "Public Policy") %>%
+  filter(gender == "Female")
+```
+
+```{r pp-male}
+pp_male <- wal %>%
+  filter(major == "Public Policy") %>%
+  filter(gender == "Male")
+```
+
+```{r female-ask-pp}
+mean(pp_female$ask_question, na.rm = FALSE)
+```
+
+```{r male-ask-pp}
+mean(pp_male$ask_question, na.rm = FALSE)
+```
+
+```{r pp-ask}
+wal_pp<- wal %>%
+  filter(major == "Public Policy") %>%
+  filter(gender == "Male" | gender == "Female")
+
+t_ask_pp <- wal_pp %>%
+  t_test(ask_question ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_ask_pp
+```
+
+
+```{r female-answer-pp}
+mean(pp_female$answer_question, na.rm = FALSE)
+```
+
+```{r male-answer-pp}
+mean(pp_male$answer_question, na.rm = FALSE)
+```
+
+
+```{r pp-answer}
+t_answer_pp <- wal_pp %>%
+  t_test(answer_question ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_answer_pp
+```
+
+```{r female-reachmale-pp}
+mean(pp_female$reach_male, na.rm = FALSE)
+```
+
+```{r male-reachmale-pp}
+mean(pp_male$reach_male, na.rm = FALSE)
+```
+
+
+```{r pp-reachmale}
+
+t_reachmale_pp <- wal_pp %>%
+  t_test(reach_male ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachmale_pp
+```
+
+```{r female-reachfemale-pp}
+mean(pp_female$reach_female, na.rm = FALSE)
+```
+
+```{r male-reachfemale-pp}
+mean(pp_male$reach_female, na.rm = FALSE)
+```
+
+
+```{r pp-reachfemale}
+
+t_reachfemale_pp <- wal_pp %>%
+  t_test(reach_female ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachfemale_pp
+```
+
+```{r female-leadgroup-pp}
+mean(pp_female$lead_group, na.rm = FALSE)
+```
+
+```{r male-leadgroup-pp}
+mean(pp_male$lead_group, na.rm = FALSE)
+```
+
+
+```{r pp-leadgroup}
+
+t_leadgroup_pp <- wal_pp %>%
+  t_test(lead_group ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_leadgroup_pp
+```
+
+```{r female-disagree-pp}
+mean(pp_female$disagree, na.rm = FALSE)
+```
+
+```{r male-disagree-pp}
+mean(stem_male$disagree, na.rm = FALSE)
+```
+
+
+```{r pp-disagree}
+
+t_disagree_pp <- wal_pp %>%
+  t_test(disagree ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_disagree_pp
+```
+
+```{r female-accountable-pp}
+mean(pp_female$accountable, na.rm = FALSE)
+```
+
+```{r male-accountable-pp}
+mean(pp_male$accountable, na.rm = FALSE)
+```
+
+
+```{r pp-accountable}
+
+t_accountable_pp <- wal_pp %>%
+  t_test(accountable ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_accountable_pp
+```
+
+Economics:
+
+```{r econ-female}
+econ_female <- wal %>%
+  filter(major == "Economics") %>%
+  filter(gender == "Female")
+```
+
+```{r econ-male}
+econ_male <- wal %>%
+  filter(major == "Economics") %>%
+  filter(gender == "Male")
+```
+
+```{r female-ask-econ}
+mean(econ_female$ask_question, na.rm = FALSE)
+```
+
+```{r male-ask-econ}
+mean(econ_male$ask_question, na.rm = FALSE)
+```
+
+```{r econ-ask}
+wal_econ<- wal %>%
+  filter(major == "Economics") %>%
+  filter(gender == "Male" | gender == "Female")
+
+t_ask_econ <- wal_econ %>%
+  t_test(ask_question ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_ask_econ
+```
+
+
+```{r female-answer-econ}
+mean(econ_female$answer_question, na.rm = FALSE)
+```
+
+```{r male-answer-econ}
+mean(econ_male$answer_question, na.rm = FALSE)
+```
+
+
+```{r econ-answer}
+t_answer_econ <- wal_econ %>%
+  t_test(answer_question ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_answer_econ
+```
+
+```{r female-reachmale-econ}
+mean(econ_female$reach_male, na.rm = FALSE)
+```
+
+```{r male-reachmale-econ}
+mean(econ_male$reach_male, na.rm = FALSE)
+```
+
+
+```{r econ-reachmale}
+
+t_reachmale_econ <- wal_econ %>%
+  t_test(reach_male ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachmale_econ
+```
+
+```{r female-reachfemale-econ}
+mean(econ_female$reach_female, na.rm = FALSE)
+```
+
+```{r male-reachfemale-econ}
+mean(econ_male$reach_female, na.rm = FALSE)
+```
+
+
+```{r econ-reachfemale}
+
+t_reachfemale_econ <- wal_econ %>%
+  t_test(reach_female ~ gender,
+         order = c("Female", "Male"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_reachfemale_econ
+```
+
+```{r female-leadgroup-econ}
+mean(econ_female$lead_group, na.rm = FALSE)
+```
+
+```{r male-leadgroup-econ}
+mean(econ_male$lead_group, na.rm = FALSE)
+```
+
+
+```{r econ-leadgroup}
+
+t_leadgroup_econ <- wal_econ %>%
+  t_test(lead_group ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_leadgroup_econ
+```
+
+```{r female-disagree-econ}
+mean(econ_female$disagree, na.rm = FALSE)
+```
+
+```{r male-disagree-econ}
+mean(stem_male$disagree, na.rm = FALSE)
+```
+
+
+```{r econ-disagree}
+
+t_disagree_econ <- wal_econ %>%
+  t_test(disagree ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_disagree_econ
+```
+
+```{r female-accountable-econ}
+mean(econ_female$accountable, na.rm = FALSE)
+```
+
+```{r male-accountable-econ}
+mean(econ_male$accountable, na.rm = FALSE)
+```
+
+
+```{r econ-accountable}
+
+t_accountable_econ <- wal_econ %>%
+  t_test(accountable ~ gender,
+         order = c("Male", "Female"),  
+         alternative = "less", 
+         conf_int = FALSE)
+
+t_accountable_econ
+```
+
+
+
+
